@@ -34,3 +34,8 @@ Route:: resource ('posts', 'PostsController'); //table name, then the controller
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
